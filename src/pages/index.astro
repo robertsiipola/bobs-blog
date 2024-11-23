@@ -1,16 +1,12 @@
 ---
+interface Props {
+  title: string;
+}
 
+const { title } = Astro.props;
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1 class="text-orange-500 text-4xl">Astro</h1>
-	</body>
-</html>
+<Layout title={title}>
+	<h1 class="text-orange-500 text-4xl font-['Raleway'] font-bold text-center">Astro</h1>
+</Layout>
